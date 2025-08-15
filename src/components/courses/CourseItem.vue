@@ -1,5 +1,5 @@
 <template>
-  <div class="course-card">
+  <div class="course-card" @click="handleToCourse">
     <div class="course-image" :class="getImageClass">
       <div v-if="course.badge" class="course-badge">{{ course.badge }}</div>
       <img 
@@ -65,7 +65,12 @@ export default {
     },
     handleImageError(event) {
       event.target.src = this.defaultImage;
-    }
+    },
+    handleToCourse() {
+      // Lưu vị trí scroll hiện tại trước khi navigate
+      
+      this.$router.push(`/courses/${this.course.id}`);
+    },
   },
   computed: {
     getImageClass() {
