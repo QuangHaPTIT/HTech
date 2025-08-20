@@ -1,10 +1,7 @@
 <template>
   <section class="courses" id="courses">
     <div class="courses-container">
-      <div class="section-title">
-        <h2>Các khóa học phổ biến</h2>
-        <p class="section-subtitle">10,000+ khóa học chất lượng</p>
-      </div>
+      <course-section-title />
 
       <div class="courses-grid">
         <course-item
@@ -13,11 +10,7 @@
           :course="course"
         />
 
-        <course-item
-          v-for="course in courses"
-          :key="course.id"
-          :course="course"
-        />
+       
       </div>
     </div>
   </section>
@@ -26,11 +19,13 @@
 <script>
 import { courseService } from "@/services/courseService";
 import CourseItem from "../courses/CourseItem.vue";
+import CourseSectionTitle from "../courses/CourseSectionTitle.vue";
 
 export default {
   name: "TheCoursesSection",
   components: {
     CourseItem,
+    CourseSectionTitle
   },
   async mounted() {
     await this.fetchCourses();

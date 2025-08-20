@@ -91,6 +91,10 @@
           <span>Đăng nhập với Google</span>
         </button>
 
+        <div class="register-link">
+          <a href="/register">Bạn chưa có tài khoản</a>
+        </div>
+
         <div v-if="loginError" class="login-error">
           <i>⚠️</i>
           {{ loginError }}
@@ -605,6 +609,25 @@ export default {
   color: #4a5568;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #718096; /* Màu chữ xám nhẹ cho phần text */
+}
+
+.register-link a {
+  color: #667eea; /* Màu xanh tím chủ đạo của bạn */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #5a67d8; /* Màu đậm hơn một chút khi di chuột */
+  text-decoration: underline; /* Thêm gạch chân khi di chuột */
 }
 
 @keyframes shake {

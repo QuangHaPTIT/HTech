@@ -3,7 +3,7 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb">
       <div class="container">
-        <a href="/">Trang chủ</a>
+        <a href="/home">Trang chủ</a>
         <span>/</span>
         <a href="/courses">Khóa học</a>
         <span>/</span>

@@ -3,6 +3,9 @@ import Vue from "vue";
 import Login from "@/views/auth/Login.vue";
 import Home from "@/views/home/Home.vue";
 import CourseDetail from "@/views/course/CourseDetail.vue";
+import Register from "@/views/auth/Register.vue";
+import CourseSearch from "@/views/course/CourseSearch.vue";
+import PurrchaseGuide from "@/views/purchase-guide/PurrchaseGuide.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -26,6 +29,22 @@ const routes = [
     component: CourseDetail,
     props: true,
   },
+  {
+    path: "/register",
+    name: "register",
+    component: Register
+  },
+  {
+    path: "/course-search/:search?",
+    name: "course-search",
+    component: CourseSearch,
+    props: true
+  },
+  {
+    path: "/purchase-guide",
+    name: "purchase-guide",
+    component: PurrchaseGuide
+  }
   // {
   //     path: '/register',
   //     name: 'register',
